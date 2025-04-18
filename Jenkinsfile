@@ -7,7 +7,7 @@ def configMap = [
     project: "roboshop"
 ]
 echo "test:"
-if( ! env.BRANCH_NAME.equalsIgnoreCase('main')){
+if(  env.BRANCH_NAME.equalsIgnoreCase('main')){
     nodeJSEKSPipeline(configMap)
 }
 else{
